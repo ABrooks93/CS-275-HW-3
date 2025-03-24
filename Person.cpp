@@ -1,12 +1,8 @@
-//
-// Created by alyss on 3/23/2025.
-//
 #include "Person.h"
 #include <sstream>
 using namespace std;
 
-Person::Person()
-{
+Person::Person() {
     Fname = "";
     Lname = "";
     birthDay = 1;
@@ -14,7 +10,7 @@ Person::Person()
     birthYear = 1;
 }
 
-Person::Person(string first, string last, int day, int month, int year){
+Person::Person(string first, string last, int day, int month, int year) {
     Fname = first;
     Lname = last;
     birthDay = day;
@@ -22,11 +18,11 @@ Person::Person(string first, string last, int day, int month, int year){
     birthYear = year;
 }
 
-string Person::getName(){
+string Person::getName() {
     return Fname + " " + Lname;
 }
 
-string Person::getBirthdate(){
+string Person::getBirthdate() {
     ostringstream bday;
     bday << birthDay << "/" << birthMonth << "/" << birthYear;
     return bday.str();
